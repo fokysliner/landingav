@@ -2,7 +2,7 @@
 <script setup lang="ts">
 import { onMounted, onBeforeUnmount, ref } from 'vue'
 import ReviewCard from './ReviewCard.vue'
-import { useReviews } from '@/composables/useReviews'
+import { useReviews } from '@/useReviews'
 
 import bgReviews from '@/assets/bg-kpi-red-glow.png'
 
