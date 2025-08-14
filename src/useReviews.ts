@@ -4,6 +4,7 @@ export type Review = {
   id: string
   text: string
   name?: string
+  author?: string
   anonymous?: boolean
   createdAt: number
   approved?: boolean
@@ -54,10 +55,12 @@ const newId = () => {
 }
 
 function addReview(text: string, name?: string, anonymous = true) {
+  const cleaned = name?.trim() || undefined
   const r: Review = {
     id: newId(),
     text: text.trim(),
-    name: name?.trim() || undefined,
+    name: cleaned,
+    author: cleaned,
     anonymous,
     createdAt: Date.now(),
     approved: false
