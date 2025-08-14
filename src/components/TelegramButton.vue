@@ -9,6 +9,7 @@ const TG_URL = 'https://t.me/palpavlovih_sc'
     rel="noopener noreferrer"
     aria-label="Написати в Telegram"
     class="fixed right-6 bottom-6 z-[60] group"
+    data-fb-lead
   >
     <span
       class="relative grid place-items-center w-16 h-16 rounded-full

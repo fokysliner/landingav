@@ -3,7 +3,7 @@ import NavBar from '@/components/NavBar.vue'
 
 import { onMounted, onBeforeUnmount, ref } from 'vue'
 import ReviewCard from '@/components/ReviewCard.vue'
-import { useReviews } from '@/useReviews';
+import { useReviews } from '@/useReviews'
 import stepsBg from '@/assets/bg-services.png'
 import kpiBg from '@/assets/bg-kpi-red-glow.png'
 import bgHeader from '@/assets/bg-header.png'
@@ -318,12 +318,14 @@ const posts = [
     </ScrollReveal>
 
     <ScrollReveal effect="slide-right" :delay="220">
-      <a
-        href="https://t.me/palpavlovih_sc"
-        target="_blank"
-        rel="noopener noreferrer"
-        class="btn-glass inline-flex items-center gap-3 px-8 py-4 rounded-2xl text-lg font-semibold"
-      >
+<a
+  href="https://t.me/palpavlovih_sc"
+  target="_blank"
+  rel="noopener noreferrer"
+  class="btn-glass inline-flex items-center gap-3 px-8 py-4 rounded-2xl text-lg font-semibold tg-btn"
+  data-fb-lead
+  aria-label="CTA: Написати в Telegram"
+>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
              class="w-6 h-6" fill="currentColor" aria-hidden="true">
           <path d="M9.8 16.6 9.9 13l7-6.5c.3-.3-.1-.4-.5-.2L7.7 12.2l-3.4-1.1c-.7-.2-.7-.7.2-1.1l16-6.2c.7-.3 1.3.2 1 1.3l-2.7 16c-.2.9-.7 1.1-1.5.7l-4.1-3-2 1.9c-.2.2-.3.3-.6.3l.2-4.4z"/>
@@ -350,14 +352,15 @@ const posts = [
     </nav>
 
     <div class="flex justify-start md:justify-end gap-3">
-      <a
-        href="https://t.me/palpavlovih_sc"
-        target="_blank"
-        rel="noopener noreferrer"
-        class="social-btn"
-        aria-label="Telegram"
-        title="Telegram"
-      >
+<a
+  href="https://t.me/palpavlovih_sc"
+  target="_blank"
+  rel="noopener noreferrer"
+  class="social-btn tg-btn"
+  data-fb-lead
+  aria-label="Footer: Telegram"
+  title="Telegram"
+>
         <svg viewBox="0 0 24 24" class="h-5 w-5 fill-current">
           <path d="M9.03 15.5 8.9 18.2a1 1 0 0 0 1.6.8l2.3-1.7 3.9 2.9a1 1 0 0 0 1.6-.6l3.7-16.4a1 1 0 0 0-1.3-1.2L2.5 9a1 1 0 0 0 .1 1.9l6 1.1 10.6-6.5-10.17 10z"/>
         </svg>
