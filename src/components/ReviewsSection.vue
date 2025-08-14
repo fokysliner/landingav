@@ -1,4 +1,6 @@
-<!-- src/components/ReviewsSection.vue -->
+Ось готовий варіант `src/components/ReviewsSection.vue` (узгоджений з твоїм `useReviews.ts`, без коментарів):
+
+```vue
 <script setup lang="ts">
 import { onMounted, onBeforeUnmount, ref } from 'vue'
 import ReviewCard from './ReviewCard.vue'
@@ -9,6 +11,7 @@ const { approved, pending, addReview, approve, reject } = useReviews()
 
 const form = ref({ text: '', name: '', anonymous: true })
 const sent = ref(false)
+const showAdmin = ref(false)
 
 function submit() {
   if (!form.value.text.trim()) return
@@ -18,14 +21,13 @@ function submit() {
   setTimeout(() => (sent.value = false), 3000)
 }
 
-const showAdmin = ref(false)
-
 function onKey(e: KeyboardEvent) {
   if (e.ctrlKey && e.shiftKey && e.key.toLowerCase() === 'm') {
     e.preventDefault()
     showAdmin.value = !showAdmin.value
   }
 }
+
 onMounted(() => window.addEventListener('keydown', onKey))
 onBeforeUnmount(() => window.removeEventListener('keydown', onKey))
 </script>
@@ -114,3 +116,4 @@ onBeforeUnmount(() => window.removeEventListener('keydown', onKey))
     </div>
   </section>
 </template>
+```
